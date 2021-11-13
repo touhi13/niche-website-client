@@ -1,6 +1,6 @@
 # Flower-shop (Paprii)
-online shopping tool for flowers and gifts
-Flower shop is an online responsive shopping website with beautiful menu options and pictures.The shopping cart code is not included here.I made this using HTML5,CSS3, Bootstrap and React .
+Online shopping app for flowers and gifts.
+Flower shop (Paprii) is an online responsive shopping website with beautiful menu options and pictures.I made this using HTML5,CSS3, Bootstrap and React.
 click on the URL below for a lookup
 [Preview](https://paprii-1fe7f.web.app/)
 
