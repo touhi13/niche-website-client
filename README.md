@@ -5,7 +5,7 @@ click on the URL below for a lookup
 [Preview](https://paprii-1fe7f.web.app/)
 
 **Admin**
-has full access of the tourism site.
+has full access.
 
 - Add and Manage Products.
 - Remove Products if needed.
@@ -14,7 +14,7 @@ has full access of the tourism site.
 - Make Admin.
 
 **Registered User**
-has partial access to the tourism site.
+has partial access.
 
 - Order Products.
 - Rate and Review Products.
