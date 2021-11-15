@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import { NavLink, useLocation, useHistory, Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 import './Login.css';
@@ -35,7 +35,7 @@ const Login = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-9 col-lg-8 mx-auto">
-                                    <h3 className="login-heading mb-4">Welcome back!</h3>
+                                    <h3 className="login-heading mb-4 text-custom-2">Login</h3>
 
                                     {/* <!-- Sign In Form --> */}
                                     <form onSubmit={handleLoginSubmit}>
@@ -56,9 +56,10 @@ const Login = () => {
                                         </div>
 
                                         <div className="d-grid">
-                                            <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                                            <button className="btn btn-lg bg-custom text-white btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
                                             <div className="text-center">
-                                                <a className="small" href="#">Forgot password?</a>
+                                                <p>New Here? <Link className="small " to="/register">Register</Link></p>
+                                                
                                             </div>
                                         </div>
 

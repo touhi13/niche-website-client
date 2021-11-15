@@ -14,20 +14,20 @@ const Banner = () => {
                     <div className="carousel-item " style={{
                         backgroundImage: `url('https://i.ibb.co/GvjQNTK/ecp8j6.jpg')` }}>
                         <div className="carousel-caption">
-                            <h5 className="fs-3">EXPLORE MOST BEAUTIFUL PLACES</h5>
+                            <h5 className="fs-3">Customised flower arrangements are available for corporate houses based on bilateral agreement.</h5>
                             {/* <p>Some representative placeholder content for the first slide.</p> */}
                         </div>
                     </div>
                     <div className="carousel-item active" style={{
                         backgroundImage: `url('https://i.ibb.co/PZtjB2z/wp3100861.jpg')` }}>
                         <div className="carousel-caption">
-                            <h5 className="fs-3">ULTIMATE TRAVEL AND TOUR BOOKING</h5>
+                            <h5 className="fs-3">Check out our wide selection of flower arrangements to make your next occasion memorable.</h5>
                             {/* <p>Some representative placeholder content for the second slide.</p> */}
                         </div>
                     </div>
                     <div className="carousel-item" style={{ backgroundImage: `url('https://i.ibb.co/44V34HX/purple-flower-pot.jpg')` }}>
                         <div className="carousel-caption">
-                            <h5 className="fs-3">FIND ADVENTURE THAT SUITS YOU </h5>
+                            <h5 className="fs-3">Bring flowers to Thanksgiving dinner. Carousel Family Florist has traditional Thanksgiving centerpieces or modern arrangements for a fun surprise.</h5>
                             {/* <p>Some representative placeholder content for the third slide.</p> */}
                         </div>
                     </div>

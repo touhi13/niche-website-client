@@ -15,7 +15,7 @@ const MakeAdmin = () => {
         const user = { email };
         console.log(token)
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://salty-hollows-81337.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,
@@ -28,19 +28,20 @@ const MakeAdmin = () => {
                 console.log(data);
                 if (data.modifiedCount) {
                     console.log(data);
+                    alert('Admin Added');
                     setSuccess(true);
                 }
             })
 
     }
     return (
-        <div className="my-5">
+        <div className="d-flex justify-content-center align-self-center flex-column my-5">
             <h2>Make an Admin</h2>
 
-            <div >
+            <div class="">
                 <form class="input-group mb-3" onSubmit={handleAdminSubmit}>
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" onBlur={handleOnBlur} />
-                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Make Admin</button>
+                    <input type="text" class="form-control" placeholder="Email Address" aria-label="Recipient's username" aria-describedby="button-addon2" onBlur={handleOnBlur} />
+                    <button class="btn bg-custom text-white" type="submit" id="button-addon2">Make Admin</button>
                 </form>
             </div>
 

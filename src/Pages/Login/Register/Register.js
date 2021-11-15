@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Register.css';
 
@@ -9,10 +10,13 @@ const Register = () => {
     const { user, registerUser, isLoading, authError } = useAuth();
 
     const handleOnBlur = e => {
+        console.log(e.target.name, e.target.value)
         const field = e.target.name;
         const value = e.target.value;
+        
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
+        console.log(newLoginData)
         setLoginData(newLoginData);
     }
     const handleLoginSubmit = e => {
@@ -20,6 +24,7 @@ const Register = () => {
             alert('Your password did not match');
             return
         }
+        console.log(loginData)
         registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
     }
@@ -32,13 +37,13 @@ const Register = () => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-9 col-lg-8 mx-auto">
-                                    <h3 className="login-heading mb-4">Welcome back!</h3>
+                                    <h3 className="login-heading mb-4">Register</h3>
 
                                     {/* <!-- Sign In Form --> */}
                                     <form onSubmit={handleLoginSubmit}>
                                         <div className="form-floating mb-3">
-                                            <input type="text" className="form-control" id="floatingInputName" placeholder="Name" />
-                                            <label for="floatingInputName" name="name" onBlur={handleOnBlur}>Name</label>
+                                            <input type="text" className="form-control" id="floatingInputName"  onBlur={handleOnBlur} placeholder="Name" name="name"/>
+                                            <label for="floatingInputName">Name</label>
                                         </div>
                                         <div className="form-floating mb-3">
                                             <input type="email" className="form-control" id="floatingInput" onBlur={handleOnBlur} placeholder="name@example.com" name="email" />
@@ -52,18 +57,11 @@ const Register = () => {
                                             <input type="password" className="form-control" id="floatingPassword2" onBlur={handleOnBlur} placeholder="Confirm Password" name="password2"/>
                                             <label for="floatingPassword2">Confirm Password</label>
                                         </div>
-
-                                        <div className="form-check mb-3">
-                                            <input className="form-check-input" type="checkbox" value="" id="rememberPasswordCheck" />
-                                            <label className="form-check-label" for="rememberPasswordCheck">
-                                                Remember password
-                                            </label>
-                                        </div>
-
                                         <div className="d-grid">
-                                            <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                                            <button className="btn btn-lg bg-custom text-white btn-login text-uppercase fw-bold mb-2" type="submit">Register</button>
                                             <div className="text-center">
-                                                <a className="small" href="#">Forgot password?</a>
+                                                <p> Already Registered?   <Link className="small" href="#">Sign In</Link></p>
+                                              
                                             </div>
                                         </div>
 

@@ -5,7 +5,8 @@ import useAuth from './../../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
-    // if (isLoading) { return <CircularProgress /> }
+    console.log('user', user);
+    if (isLoading) { return <h1>Loading..</h1> }
     return (
         <Route
             {...rest}
